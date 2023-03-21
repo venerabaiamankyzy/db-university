@@ -3,6 +3,7 @@ _Esercizio di oggi:_
 #### Query con JOIN
 
 **1. Selezionare tutti gli studenti(studenti) iscritti al (degrees) Corso di Laurea in Economia**
+
 SELECT `students`.\*\
 FROM `students`\
 JOIN `degrees` ON `students`.`degree.id` = `degrees`.`id`\
@@ -10,6 +11,7 @@ WHERE `degrees`.`name` = "Corso di Laurea in Economia";\
 ORDER BY `students`.`degree.id` DESC
 
 **2. Selezionare tutti i (degrees) Corsi di Laurea Magistrale del (departments) Dipartimento di Neuroscienze**
+
 SELECT `degrees`.\*\
 FROM `degrees`\
 JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`\
@@ -17,6 +19,7 @@ WHERE `degrees`.`level` = "magistrale"\
 AND `departments`.`name` = "Dipartimento di Neuroscienze";
 
 **3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)**
+
 SELECT `courses`.\*\
 FROM `course_teacher`\
 JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id`\
